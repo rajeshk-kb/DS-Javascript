@@ -6,7 +6,6 @@ const rl = readline.createInterface({
 });
 
 rl.question('Please Enter a number : ', (answer) => {
-    //console.log(`Thank you for your valuable feedback: ${answer}`);
     console.log(createFibSearies(answer))
 });
 
