@@ -5,24 +5,25 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-rl.question('Please Enter a number : ', (answer) => {
-    console.log(findMissing(answer))
-});
+//rl.question('Please Enter a number : ', (answer) => {
+    console.log(findMissing())
+//});
 
 
-function findMissing(number) {
+function findMissing() {
     console.log("___________________  Output  ____________________")
-    var arr = [0, 1, 2, 3, 4, 5, 6, 8, 9, 11]
+    var arr = [1, 3, 2, 5, 4, 6, 7, 10, 8, 11]
 
 
-    var n = arr.length-1;
+    var n = arr.length;
     var sum = 0;
-    for(var i = 0; i<n; i++){
-        sum += arr[i];
+    for(var i = 0; i<n-1; i++){
+        //sum += arr[i];
+        if(arr.indexOf(i+1) == -1){
+            return i+1;
+        }
     }
 
-    var total = (n+1)*(n+1+1)/2;
-console.log(sum)
-console.log(total)
-    return total - sum;
+   // var total = n*(n+1)/2;
+  //  return total - sum;
 } 

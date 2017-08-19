@@ -23,8 +23,8 @@ function isPalindrome(number) {
     var i = 0
 
     while (parseInt(palindrome) != 0) {
-        var remender = parseInt(palindrome) % 10;
-        result = remender * Math.pow(10, number.length-1- parseInt(i)) + result;
+        var remainder = parseInt(palindrome) % 10;
+        result = remainder * Math.pow(10, number.length-1- parseInt(i)) + result;
         palindrome = palindrome / 10;
         i++;
     } 
@@ -33,3 +33,16 @@ function isPalindrome(number) {
     }
     return false;
 }
+
+
+    // Using recursion
+    /* var tempArr = number.split('');
+    if(tempArr[start] == tempArr[end]){
+        if(start == end){
+            return true;
+        }else{
+            return isPalindrome(number, start+1, end-1)
+        }
+    }else{
+        return false;
+    } */
