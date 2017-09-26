@@ -39,13 +39,18 @@ BinarySearchTree.prototype.insert = function(value){
 }
 
 var bst = new BinarySearchTree();
-bst.insert(3);
-bst.insert(2);
-bst.insert(10);
-bst.insert(1);
-bst.insert(5);
-bst.insert(12);
-bst.insert(8);
-bst.insert(11);
+bst.insert(30);
+bst.insert(25);
+bst.insert(35);
+bst.insert(20);
+bst.insert(27);
+bst.insert(32);
+bst.insert(40);
+bst.insert(22);
+bst.insert(26);
+bst.insert(38);
+bst.insert(50);
         
-console.log(bst)
+//console.log(bst)
+
+module.exports.root = bst.root;
