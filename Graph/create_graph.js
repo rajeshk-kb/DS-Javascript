@@ -10,10 +10,10 @@ function addVertex(adj, v, w){
 
     /* For undirected graph */
     // ---- start ------
-    if(!adj.get(w)){
+   /*  if(!adj.get(w)){
         adj.set(w, []);
         adj.get(w).push(v);
-    }
+    } */
     // ---- end ------
 }
 
@@ -24,11 +24,11 @@ Graph.prototype.addEdge = function (v, w) {
 
         /* For undirected graph */
         // ---- start ------
-        if(!this.AdjList.get(w)){
+        /* if(!this.AdjList.get(w)){
             addVertex(this.AdjList, w, v)
         }else{
             this.AdjList.get(w).push(v);
-        }
+        } */
         // ---- end ------
         
     }else{
@@ -39,6 +39,12 @@ Graph.prototype.addEdge = function (v, w) {
 
 let graph = new Graph();
 
+graph.addEdge(0, 1);
+graph.addEdge(0, 2);
+// graph.addEdge(1, 2);
+graph.addEdge(2, 0);
+graph.addEdge(2, 3);
+graph.addEdge(3, 3);
 // graph.addEdge(0, 1);
 // graph.addEdge(0, 4);
 // graph.addEdge(1, 2);
@@ -58,15 +64,15 @@ let graph = new Graph();
 
 
 /* Example 2 */
-        graph.addEdge('A', 'B');
-        graph.addEdge('A', 'D');
-        graph.addEdge('A', 'G');
-        graph.addEdge('B', 'E');
-        graph.addEdge('B', 'F');
-        graph.addEdge('E', 'G');
-        graph.addEdge('F', 'C');
-        graph.addEdge('F', 'D');
-        graph.addEdge('C', 'H');
+        // graph.addEdge('A', 'B');
+        // graph.addEdge('A', 'D');
+        // graph.addEdge('A', 'G');
+        // graph.addEdge('B', 'E');
+        // graph.addEdge('B', 'F');
+        // graph.addEdge('E', 'G');
+        // graph.addEdge('F', 'C');
+        // graph.addEdge('F', 'D');
+        // graph.addEdge('C', 'H');
         
 //console.log(graph)
                       /*  Output of directed graph   */

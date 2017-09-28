@@ -8,10 +8,9 @@ console.log('==========')
 
 function dfs(data) {
     var visitedNodes = [];
-    var dfs = dfsRecursive('A', data, visitedNodes)// 0 or 'A' or 'any node' 
-    console.log('Depth First Traversal for a Graph')
-    console.log(dfs.join(' - '))
-
+    var dfsArr = dfsRecursive('A', data, visitedNodes)  // starting node 'A'
+    console.log('Following is Depth First Traversal (starting from vertex A)')
+    console.log(dfsArr.join(' - '))
 }
 
 function dfsRecursive(start, data, visited) {
@@ -20,13 +19,11 @@ function dfsRecursive(start, data, visited) {
 
     for(var j in neighbour){
         var neighbour_elem = neighbour[j]
-       // console.log(neighbour_elem)
         if(visited.indexOf(neighbour_elem) == -1){
             dfsRecursive(neighbour_elem, data, visited)
         }
     }
     return visited;
 }
-
 
 dfs(graph.root.AdjList);

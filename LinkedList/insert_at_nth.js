@@ -8,6 +8,10 @@ function LikedList() {
 function insert(head, index, val) {
     
     if (index === 0) {
+        if(val == 35){
+            console.log("1111")
+            console.log(head)
+        }
         let node = {
             data: val,
             next: null
@@ -15,6 +19,10 @@ function insert(head, index, val) {
         node.next = head
         head = node;
         return head
+    }
+    
+    if(val == 35){
+        console.log("000")
     }
     head.next = insert(head.next, index - 1, val)
     return head
@@ -35,7 +43,7 @@ ll.push(2, 19);
 ll.push(1, 22);
 ll.push(2, 15);
 ll.push(3, 11);
-ll.push(0, 35);
+ll.push(5, 35);
 
 
 console.log(ll.head.data)
