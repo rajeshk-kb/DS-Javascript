@@ -11,7 +11,7 @@ console.log(serchedElement)
 
 function binarySearch(arr, first, last, search){
     if(last <= 0){
-        return -1;
+        return -1; // element not found
     }
     var mid = first+last;
     if(search == arr[mid]){

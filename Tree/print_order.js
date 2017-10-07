@@ -11,7 +11,7 @@ print_preorder(BST.root);
 
 
 // Print by inorder
-// or print in sorting order
+// or print in sorting order(ascending order)
 // or left --> right
 function print_inorder(root){ 
     if(!root){
