@@ -2,7 +2,7 @@
 
 let list = require('./insert_at_nth.js'); 
 
-console.log('Likedlist is cyclic - '+checkCyclic(list.node))
+console.log('Linkedlist is cyclic - '+checkCyclic(list.node))
 function checkCyclic(head) {
     var slow_p = head;
     var fast_p = head;
@@ -15,6 +15,10 @@ function checkCyclic(head) {
        }
        return 'NO';
 }
+
+
+// Detect loop and remove it
+// http://www.geeksforgeeks.org/detect-and-remove-loop-in-a-linked-list/
 
 
 
