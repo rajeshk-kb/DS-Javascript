@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
+    "circular-json": "^0.5.1",
     "express": "^4.15.3",
     "file-system": "^2.2.2",
     "nodemon": "^1.11.0"
