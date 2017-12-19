@@ -20,39 +20,39 @@
         var f = parseInt(sp[0]);
         var f = parseInt(sp[1]);
 
-        if(f>=2 && i<num){
-            arr.push(parseInt(f+''+(f-1)));
-            arr.push(parseInt(f+''+(f+1)));
-            i = parseInt(f+''+(f+1));
-        }else if(f == 0){
+        if (f >= 2 && i < num) {
+            arr.push(parseInt(f + '' + (f - 1)));
+            arr.push(parseInt(f + '' + (f + 1)));
+            i = parseInt(f + '' + (f + 1));
+        } else if (f == 0) {
             arr.push(10);
             i++;
-        }else{
+        } else {
             i++
         }
     }
 
     console.log(arr)
-    
+
 })(40);
 
 
 
 
 (function (X, K) {
-/*     var max = X*1000;
-
-    for (var i = 10000; i < max; i++) {
-       if(i%X == 0){
-        console.log(i)
-        return;
-       } */
-   // }
+    /*     var max = X*1000;
+    
+        for (var i = 10000; i < max; i++) {
+           if(i%X == 0){
+            console.log(i)
+            return;
+           } */
+    // }
     // Computing MIN
-    var MIN = Math.pow(10, K-1);
+    var MIN = Math.pow(10, K - 1);
 
     // MIN is the result
-    if (MIN % X == 0){
+    if (MIN % X == 0) {
         console.log(MIN)
         return MIN;
     }
@@ -95,3 +95,40 @@
         }
     }
 })(); */
+
+
+// Dynamic Programming | Set 28 (Minimum insertions to form a palindrome)
+// http://www.geeksforgeeks.org/dynamic-programming-set-28-minimum-insertions-to-form-a-palindrome/
+
+var str = 'geeks';
+
+findMinInsertionsDP(str, str.length);
+
+
+function findMinInsertionsDP(str, n) {
+    var tbl = [];
+
+    for(var i = 0; i<n; i++){
+        var tbl1 = [];
+        for(var j = 0; i<n; i++){
+            tbl1[j] = 0;
+        }
+        tbl[i] = tbl1;
+    }
+    var l, h, gap;
+
+    // Fill the table
+    for (gap = 1; gap < n; ++gap) {
+        for (l = 0, h = gap; h < n; ++l, ++h) {
+            tbl[l][h] = (str[l] == str[h]) ? table[l + 1][h - 1] : (min(tbl[l][h - 1], tbl[l + 1][h]) + 1);
+        }
+    }
+
+    // Return minimum number of insertions for
+    // str[0..n-1]
+    return table[0][n - 1];
+}
+
+function min(a, b){
+    return a < b ? a : b;
+}
