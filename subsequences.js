@@ -20,6 +20,7 @@ function generate(st, str) {
         for (var i = 0; i < str.length; i++) {
             var tmp = str;
             // drop character from the string
+            // drop ith character from string
             tmp = str.slice(0, i) + str.slice(i+1);
            generate(st, tmp);
         }
