@@ -31,7 +31,7 @@ for (var cl = 2; cl <= n; cl++) {
     }
 }
 
-//console.log(L)
+// console.log(L)
 console.log(L[0][n-1])
 
 function max(x, y){
