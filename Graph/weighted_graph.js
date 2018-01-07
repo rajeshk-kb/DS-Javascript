@@ -1,3 +1,5 @@
+'use strict';
+
 var util = require('util')
 
 
@@ -53,7 +55,7 @@ let graph = new Graph();
 // graph.addEdge('H', { E: 1, F: 3 });
 
 
-
+// Dijkastra Algorithm
 graph.addEdge('A', { B: 2, C: 4 });     // https://www.youtube.com/watch?v=Lfb8qkXzHY0
 graph.addEdge('B', { C: 1, D: 4, E: 2 });
 graph.addEdge('C', { E: 3 });
