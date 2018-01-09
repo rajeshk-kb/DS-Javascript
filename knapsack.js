@@ -23,14 +23,9 @@ for (var i = 0; i <= value.length; i++) {
         } else if (weight[i-1] > w) {
             K[i][w] = K[i - 1][w]
         } else {
-            K[i][w] = max(K[i - 1][w], (value[i - 1] + K[i - 1][(w - weight[i - 1])]));
+            K[i][w] = Math.max(K[i - 1][w], (value[i - 1] + K[i - 1][(w - weight[i - 1])]));
         }
     }
-}
-
-
-function max(val1, val2) {
-    return val1 > val2 ? val1 : val2;
 }
 
 console.log(K)
