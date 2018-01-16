@@ -1,4 +1,4 @@
-// Wildcard Pattern Matching
+// 1. Wildcard Pattern Matching
 // http://www.geeksforgeeks.org/wildcard-pattern-matching/
 
 var str = "baaabab";
@@ -50,10 +50,17 @@ var util = require('util');
 
 
 
-// Rearrange characters in a string such that no two adjacent are same
+
+
+
+
+
+
+
+// 2. Rearrange characters in a string such that no two adjacent are same
 // https://www.geeksforgeeks.org/rearrange-characters-string-no-two-adjacent/
 
-var str = 'aaabbbbcc';
+var str = 'aaaaabbbcc';
 var ln = str.length;
 
 var count = new Array(26);
@@ -96,14 +103,37 @@ PriorityQueue.prototype.size = function () {
 var queue = new PriorityQueue()
 
 
-for(var k in  count){
-    queue.push(String.fromCharCode(97+parseInt(k)), count[k])
+for (var k in count) {
+    queue.push(String.fromCharCode(97 + parseInt(k)), count[k])
 }
-
 
 console.log(queue)
+var str2 = '';
+var prev = ['#', -1];
 while (queue.size()) {
-     console.log(queue.pop())
+    var key = queue.data[0];
+    queue.pop();
+
+    str2 = str2 + key[0];
+
+    if (prev[1] > 0)
+        queue.push(prev[0], prev[1]);
+
+    key[1]--;
+    prev = key;
 }
 
+if (str.length !== str2.length)
+    console.log('not possible')
+else
+    console.log(str2)
 
+
+
+    // Output  : ababacacab
+
+    // -------- Explanation where : X --> Remove from queue, and f -- removed permanently 
+    //              a   b   a   b   a                c   a   c   a   b
+    // 1. a - 5 | - x - 4 - x - 3 - x              - 2 - x - 1 - x - R - R
+    // 2. b - 3 | - 3 - x - 2 - x - 1 \/ 2. c  - 2 - x - 1 - x - R - R - R
+    // c. c - 2 | - 2 - 2 - 2 - 2 - 2 /\ 3. b  - 1 - 1 - 1 - 1 - 1 - X - R
