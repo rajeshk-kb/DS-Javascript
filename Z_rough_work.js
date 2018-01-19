@@ -59,4 +59,77 @@ while (start < arr.length && end < arr.length) {
     }
 }
 
-console.log(start, end-1)
+console.log(start, end - 1)
+
+
+
+
+
+function Node(val) {
+    this.value = val;
+    this.left = null;
+    this.right = null;
+}
+
+function BinarySearchTree() {
+    this.root = null
+}
+
+var bst = new BinarySearchTree();
+
+bst = new Node(6);
+bst.left = new Node(10);
+bst.right = new Node(2);
+bst.left.left = new Node(1);
+bst.left.right = new Node(3);
+bst.right.right = new Node(12);
+bst.right.left = new Node(7);
+
+
+//console.log(bst)
+
+
+correctBST(bst);
+var first = null;
+var prev = null;
+var middle = null;
+var last = null;
+function correctBST(root) {
+    // Initialize pointers needed 
+    // for correctBSTUtil()
+
+    correctBSTUtil(root);
+
+    console.log(first)
+    console.log(last)
+    console.log(middle)
+   console.log(prev)
+    // Set the poiters to find out 
+    // two nodes
+    //correctBSTUtil( root );
+}
+
+function correctBSTUtil(root) {
+    if (root != null) {
+        correctBSTUtil(root.left);
+        // console.log('-----------')
+        // console.log(prev)
+
+        if (prev != null && root.value <
+            prev.value) {
+            if (first == null) {
+                first = prev;
+                middle = root;
+            }
+            else
+                last = root;
+        }
+
+        prev = root;
+       // https://www.geeksforgeeks.org/gate-cs-notes-gq/
+       // console.log('------')
+        correctBSTUtil(root.right);
+    }
+}
+
+//console.log(bst)

@@ -27,6 +27,7 @@ function hasPathSum(root, num) {
        
     }
     if (findPath) {
+        console.log("dddd")
         return num
     } else {
         return 0;
