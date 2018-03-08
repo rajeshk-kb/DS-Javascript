@@ -133,3 +133,13 @@ function correctBSTUtil(root) {
 }
 
 //console.log(bst)
+
+
+
+
+var num =5;
+n >>= 1;
+
+
+// console.log('\x1b[31m%s\x1b[0m', "=================")
+//console.log(util.inspect(ll, { showHidden: true, depth: null, colors: true }))
