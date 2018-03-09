@@ -28,13 +28,12 @@ function deleteNode(root, n, sizeOfList){
         n--;
     }
     previousNode.next = currentNode.next;
-
     return root;
 }
 
 
 console.log("Before    : " + printList(list.node))
-var root = deleteNode(list.node, -1, 7);
+var root = deleteNode(list.node, 6, 7);
 console.log("After     : " + printList(root))
 
 function printList(head) {
