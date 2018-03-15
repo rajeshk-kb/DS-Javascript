@@ -43,9 +43,9 @@ ll.push(23);
 var util = require('util');
 
 
-///console.log(util.inspect(ll, { showHidden: true, depth: null, colors: true }))
+//console.log(util.inspect(ll, { showHidden: true, depth: null, colors: true }))
 
-var result = swapNodes(7, 14, ll.head);
+var result = swapNodes(6, 23, ll.head);
 console.log(util.inspect(result, { showHidden: true, depth: null, colors: true }))
 
 function swapNodes(x, y, head) {
@@ -71,23 +71,38 @@ function swapNodes(x, y, head) {
     var pY = p;
     var prevY = prev;
 
-    var temp = pY.next;
-    pY.next = pX.next;
-    pX.next = temp;
 
-    if(pX == prevY){
-        head = pY;
-        prevY.next = pX;
-    }
-    if(prevX == null){
-        head = pY;
-        prevY.next = pX;
-    }
 
-    if(prevX != null && prevX != null){
+    if (pX == prevY && prevX == null) {  // {6, 7}
+        var temp = pY.next;
+        pY.next = pX;
+        pX.next = temp;
+        head = pY;
+    } else if (pX == prevY && pY.next == null) { // {9 ,23}
+        prevX.next = pY;
+        pY.next = pX;
+        pX.next = null;
+
+    } else if (prevX == null && pY.next == null) {// {6 ,23} // for end points only
+        var temp = pX.next;
+        pX.next = null;
+        prevY.next = pX;
+        pY.next = temp;
+        head = pY;
+    }
+    else if (pY.next != null && pY.next != null && pX == prevY) { // {7, 14}
+        var temp = pY.next;
+        pY.next = pX; // or prevY
+        pX.next = temp;
+        prevX.next = pY;
+    }
+    else if (pY.next != null && pY.next != null) { // {7, 21}
+
+        var temp = pY.next;
+        pY.next = pX.next;
+        pX.next = temp;
         prevX.next = pY;
         prevY.next = pX;
     }
-
     return head
 }
