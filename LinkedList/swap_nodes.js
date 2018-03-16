@@ -45,10 +45,15 @@ var util = require('util');
 
 //console.log(util.inspect(ll, { showHidden: true, depth: null, colors: true }))
 
-var result = swapNodes(6, 23, ll.head);
+var result = swapNodes(7, 23, ll.head);
 console.log(util.inspect(result, { showHidden: true, depth: null, colors: true }))
 
 function swapNodes(x, y, head) {
+
+
+    if(x == y || head == null){
+        return head;
+    }
 
     // Find pre and next elements of x
     var p = head;
@@ -89,6 +94,12 @@ function swapNodes(x, y, head) {
         prevY.next = pX;
         pY.next = temp;
         head = pY;
+    } else if (prevX != null && pY.next == null) {// {7 ,23} // for end points only
+        var temp = pX.next;
+        pX.next = null;
+        prevY.next = pX;
+        pY.next = temp;
+        prevX.next = pY;
     }
     else if (pY.next != null && pY.next != null && pX == prevY) { // {7, 14}
         var temp = pY.next;
