@@ -6,7 +6,7 @@
  * r2i [c2-1   c1]
  * jc1 [r2-1  r1+1]
  * */
-
+ 
 (function () {
     var n = 10;
     var A = [];
