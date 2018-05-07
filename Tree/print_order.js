@@ -40,7 +40,7 @@ function print_preorder(root){
 
 console.log("=========================")
 
-// Print by inorder
+// Print by post
 // or print in sorting order
 // or left --> right
 function print_postorder(root){ 
