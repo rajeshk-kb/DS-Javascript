@@ -20,7 +20,6 @@ function printSpiral(root) {
     for (var i = 1; i <= h; i++) {
         print_given_level(root, i, ltr);
         ltr = !ltr;
-        
     }
    
     console.log(arr.join(' '));
