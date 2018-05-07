@@ -89,5 +89,5 @@ function postfix_to_infix(exp) {
             stack.push(new_element);
         }
     }
-    console.log(stack.join(' '))
+    console.log(stack.join(' ')) 
 }
