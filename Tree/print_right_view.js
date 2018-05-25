@@ -14,7 +14,7 @@ function rightViewUtil(root, level, mx) {
     }
 
     // If this is the last Node of its level
-    if (mx < level) {
+    if (level>mx) {
         console.log(root.value)
         max_level = level;
     }

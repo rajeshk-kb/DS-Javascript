@@ -50,6 +50,7 @@ bst.insert(22);
 bst.insert(26);
 bst.insert(38);
 bst.insert(50);
+bst.insert(21);
         
 //console.log(bst)
 
