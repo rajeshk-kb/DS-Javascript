@@ -1,24 +1,40 @@
-var num = 25;
-var is_prime = false;
-var prime = [];//boolean
 
-for (let i = 0; i < num; i++) {
-    prime[i] = true;
-}
-for (let i = 2; i*i <= num; i++) {
+// Print string of odd length in ‘X’ format
+ // https://www.geeksforgeeks.org/print-string-of-odd-length-in-x-format/
+
+var name = "geeksforgeeks";
+
+
+var len = name.length;
+
+
+var space1 = '';
+
+for(var i= 0; i<len; i++){
+    var space2 = ' ';
+    var p1 = name.charAt(i);
+    var p2 = name.charAt(len-i-1);
     
-    if(prime[i] == true){
-        for(var j = i*2; j<=num; j += i){
-            prime[j] = false;
+    if(p1 == p2 && i > len/2-1 && i < len/2){
+        p2 = '';
+    }else if(i<len/2){
+
+        for(var k = 2; k<len/2-i; k++){
+            space2 = space2+'  ';
+        }
+        
+    }else{
+        space1 = '';
+        for(var m = len/2+1; m<i; m++){
+            space2 = space2+'  ';
+        }
+        for(var k = 0; k<len-i-1; k++){
+            space1 = space1+' ';
         }
     }
-}
-
-for (var k = num; k >=2 ; k--) {
-    if(prime[k] == true){
-        console.log(k)
-    }
-}
+    console.log(space1+p1+space2+p2)
+    space1 = space1+' ';
+}   
 
 
 
