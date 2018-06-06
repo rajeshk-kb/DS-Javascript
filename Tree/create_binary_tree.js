@@ -44,13 +44,6 @@ bst.insert(25);
 bst.insert(35);
 bst.insert(20);
 bst.insert(27);
-bst.insert(32);
-bst.insert(40);
-bst.insert(22);
-bst.insert(26);
-bst.insert(38);
-bst.insert(50);
-bst.insert(21);
         
 //console.log(bst)
 
