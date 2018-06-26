@@ -25,7 +25,7 @@ Trie.prototype.insert = function(word){
 			node.children[word[i]] = new TrieNode(word[i]);
 
 			// assign the parent to the child node.
-			//node.children[word[i]].parent = node;
+			node.children[word[i]].parent = node;
 		}
 
 		// procced the next depth in the trie.

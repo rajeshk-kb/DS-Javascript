@@ -9,8 +9,8 @@ var util = require('util');
 
 
 
-//console.log(util.inspect(Trie, { showHidden: true, depth: null, colors: true }))
-// check contains method
+// check if it contains a whole word.
+// time complexity: O(k), k = word length
 var is_found = search_word_trie(Trie.trie, "abc");
 console.log(is_found?'found':'not found');
 
@@ -19,6 +19,7 @@ console.log(is_found?'found':'not found');
 function search_word_trie(root, word){
 	
 	var node = root
+	var current = node;
 
 	for(var i = 0;  i<word.length; i++){
 		//console.log(node)
@@ -28,6 +29,9 @@ function search_word_trie(root, word){
 		}else{
 			return false;
 		}
+		if(i == word.length-1 && node.end !== true){
+            return false;
+        }
 	}
 	return true;
 }

@@ -1,19 +1,7 @@
-//https://www.geeksforgeeks.org/difference-between-sums-of-odd-and-even-levels/
-
-
-// https://www.geeksforgeeks.org/tree-isomorphism-problem/
-'use strict';
-
-
-let BST = require('./create_binary_tree.js');
-
-
 var util = require('util');
 //console.log(util.inspect(BST, { showHidden: true, depth: null, colors: true }))
 
 // Design a movie ticket booking system like Bookmyshow
-
-
 
 //The Main Classes to be used for the user personas :
 

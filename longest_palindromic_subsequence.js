@@ -2,7 +2,7 @@
 
 // https://www.geeksforgeeks.org/dynamic-programming-set-12-longest-palindromic-subsequence/
 // https://www.geeksforgeeks.org/longest-palindromic-substring-set-2/
-var str = "adbbca";
+var str = "adbbca"; // Output (EE K EE)
 
 var n = str.length;
 var L = [];
@@ -21,6 +21,8 @@ for (var i = 0; i < n; i++) {
 for (var cl = 2; cl <= n; cl++) {
     for (var i = 0; i < n - cl + 1; i++) {
         var j = i + cl - 1;
+        console.log(i,     j, cl)
+        
         if (str[i] == str[j] && cl == 2){
             L[i][j] = 2;
         }else if (str[i] == str[j]){
@@ -29,9 +31,10 @@ for (var cl = 2; cl <= n; cl++) {
             L[i][j] = max(L[i][j - 1], L[i + 1][j]);
         }
     }
+    console.log('-----------')
 }
 
-// console.log(L)
+ console.log(L)
 console.log(L[0][n-1])
 
 function max(x, y){
