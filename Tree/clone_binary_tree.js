@@ -27,35 +27,29 @@ function copyLeftRightNode(treeNode, mymap) {
         return null;
     var cloneNode = new newNode(treeNode.value);
     mymap.set(treeNode, cloneNode);
+    console.log(mymap)
+    console.log('--------------')
     cloneNode.left = copyLeftRightNode(treeNode.left, mymap);
     cloneNode.right = copyLeftRightNode(treeNode.right, mymap);
     return cloneNode;
 }
 
 // // This function copies random node by using the hashmap built by
-// // copyLeftRightNode()
 function copyRandom(treeNode, cloneNode, mymap) {
     if (cloneNode == null)
         return;
-
-   // console.log(mymap.get(treeNode.random))
-   // console.log('==========')
     cloneNode.random = mymap.get(treeNode.random);
     copyRandom(treeNode.left, cloneNode.left, mymap);
     copyRandom(treeNode.right, cloneNode.right, mymap);
 }
 
 // This function makes the clone of given tree. It mainly uses
-// copyLeftRightNode() and copyRandom()
 function cloneTree(tree) {
-    console.log(tree)
     if (tree == null)
         return null;
     var mymap = new Map();
     var newTree = copyLeftRightNode(tree, mymap);
-    console.log('-----')
-    
-     copyRandom(tree, newTree, mymap);
-     
+    // copyRandom(tree, newTree, mymap);
+    // console.log(mymap)
     return newTree;
 }

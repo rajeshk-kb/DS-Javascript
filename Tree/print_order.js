@@ -3,8 +3,8 @@
 let BST = require('./create_binary_tree.js');
 
 
-//print_inorder(BST.root);
-print_preorder(BST.root);
+print_inorder(BST.root);
+//print_preorder(BST.root);
 //print_postorder(BST.root);
 
 
