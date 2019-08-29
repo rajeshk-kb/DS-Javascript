@@ -8,7 +8,6 @@ console.log(graph.root)
 console.log('==========')
 
 
-
 function checkCyclic(data) {
     var visited = [];
      data.forEach(function(element, key){
@@ -23,19 +22,15 @@ function checkCyclic(data) {
 function isCyclicUtil(key, visited, data) {
     if(visited.indexOf(key)<0){
         visited.push(key);
-
-
         var neighbours = data.get(key)
         for(var j in neighbours){
-            var neighbour_elem = neighbours[j]
-            if(visited.indexOf(neighbour_elem>0)){
-                return true;
+            var neighbour_elem = neighbours[j];
+            if(visited.indexOf(neighbour_elem)<0){
+                // return false;
             }else{
-                
-                return false
+                return true
             }
         }
-
     }else{
         return false;
     }
