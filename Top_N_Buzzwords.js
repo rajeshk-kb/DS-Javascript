@@ -51,7 +51,6 @@ function findToy(quotes, toys, topToys, numToys) {
   if (topToys > numToys) {
     return sorted;
   }
-
   //if not return top toys
   else {
     let results = [];
