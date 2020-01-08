@@ -3,42 +3,23 @@
 let BST = require('./create_binary_tree.js');
 
 var head = null;
-var tail = null;
-var prev = null;
+var prev = null
 
-var ht = binaryToDLL(BST.root, head, prev, tail);
-
-// console.log(BST)
-
-
-
-
-
-var head = BST.root;
-function binaryToDLL(root, head, prev, tail){
-    if(head == null){
-        return root;
-    }
-    binaryToDLL(root.left, head, prev, tail);
-    if (head === null) {
-        head = root;
-      //console.log(head)
-    }
-    if (prev === null) {
-        prev = root;
-      //console.log(prev)
-    } else {
-        //console.log(root);
-      //console.log(prev);
-      root.left = prev;
-      prev.right = root;
-    }
-    prev = node
-    binaryToDLL(root.left, head, prev, tail);
-    if(root.right === null) {
-        tail = root;
-    }
-    return head;
+binaryToDLL(BST.root);
+console.log(BST.root)
+  
+function binaryToDLL(root){
+  if(root == null){
+      return;
+  }
+  binaryToDLL(root.left);
+  if (prev === null) {
+      prev = root;
+  } else {
+    root.left = prev;
+    prev.right = root;
+  }
+  prev = root;
+  binaryToDLL(root.right);
 }
 
-console.log(ht)
