@@ -1,25 +1,3 @@
-
- var ds = new MyDS();
-
-  ds.add(10);
-  ds.add(20);
-  ds.add(30);
-  ds.add(40);
-  console.log(ds)
-
-  console.log(ds.search(30)); 
-  ds.remove(20); 
-  ds.add(50); 
-  console.log(ds.search(50)); 
-  console.log((ds.getRandom())); 
-  console.log(ds)
-  
-  
-  
-  
-  
-
-
 function MyDS() {
   this.arr = new Array();
   this.hash = new Map(); // Hash
@@ -73,6 +51,24 @@ MyDS.prototype.getRandom = function () {
 }
 
 
+
+ /// --------------------
+ var ds = new MyDS();
+
+  ds.add(10);
+  ds.add(20);
+  ds.add(30);
+  ds.add(40);
+  console.log(ds)
+
+  console.log(ds.search(30)); 
+  ds.remove(20); 
+  ds.add(50); 
+  console.log(ds.search(50)); 
+  console.log((ds.getRandom())); 
+  console.log(ds)
+  
+  
 
 
 
