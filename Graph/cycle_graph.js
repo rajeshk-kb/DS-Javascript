@@ -26,6 +26,7 @@ function isCyclicUtil(key, visited, data) {
         for(var j in neighbours){
             var neighbour_elem = neighbours[j];
             if(visited.indexOf(neighbour_elem)<0){
+                visited.push(neighbour_elem);
                 // return false;
             }else{
                 return true

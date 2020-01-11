@@ -136,4 +136,23 @@ if (pattern.charAt(0) == '-') {
 } else {
     console.log('Not Matched')
     return false;
+
+
 }
+
+
+
+
+
+
+
+
+// Amazon ----
+// https://www.geeksforgeeks.org/add-two-numbers-represented-by-linked-lists/
+
+
+
+
+
+
+

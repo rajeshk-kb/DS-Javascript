@@ -16,7 +16,7 @@ var ht = binaryToDLL(BST.root, head, prev, tail);
 
 var head = BST.root;
 function binaryToDLL(root, head, prev, tail){
-    if(head == null){
+    if(root == null){
         return root;
     }
     binaryToDLL(root.left, head, prev, tail);
@@ -33,8 +33,8 @@ function binaryToDLL(root, head, prev, tail){
       root.left = prev;
       prev.right = root;
     }
-    prev = node
-    binaryToDLL(root.left, head, prev, tail);
+    prev = root
+    binaryToDLL(root.right, head, prev, tail);
     if(root.right === null) {
         tail = root;
     }
