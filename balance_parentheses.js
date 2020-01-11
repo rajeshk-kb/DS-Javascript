@@ -36,3 +36,27 @@ function checkParantheses(str){
 }
 
 // Time complaxity ---- O(n)
+
+
+
+// Generate Parenthesis
+var n = 3;
+var solution = [];
+generateParenthesis('', 0, 0, n)
+
+function generateParenthesis(str, left, right, max){
+    if(str.length == max*2){
+        solution.push(str)
+        return;
+     }
+    if(left<max){
+        generateParenthesis(str+'(', left+1, right, max)
+    }
+    if(right<left){
+        generateParenthesis(str+')', left, right+1, max)
+    }
+}
+
+console.log(solution) // [ '((()))', '(()())', '(())()', '()(())', '()()()' ]
+
+
