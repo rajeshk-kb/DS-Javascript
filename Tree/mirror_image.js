@@ -54,5 +54,11 @@ function check_mirror_image(root1, root2) {
         console.log('123456')
          return false;
      }
-    
 }
+
+
+
+
+
+// N-Array mirror image
+// https://www.youtube.com/watch?v=UGzXSDZv-SY
