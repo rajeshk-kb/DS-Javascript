@@ -3,6 +3,9 @@
 var arr = [9.00, 9.40, 9.50, 11.00, 15.00, 18.00]
 var dep = [9.10, 12.00, 11.20, 11.30, 19.00, 20.00]
 
+arr.sort((a, b)=>{return a-b;});
+dep.sort((a, b)=>{return a-b;});
+
 var i = 1, j = 0;
 var plat_needed = 1;
 var result = 1;
