@@ -4,36 +4,49 @@
 
 
 
-var arr =  [[1, 2, 3, 4,],
-            [5, 6, 7, 8,],
-            [9, 10, 11, 12,],
-            [13, 14, 15, 16,],
-            [17, 18, 19, 20,]];
+var arr = [[1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12],
+  [13, 14, 15, 16],
+  [19, 21, 30, 52]]
 
-var ROW = 5;
-var COL = 4;
+  var ROW = 5;
+  var COL = 4;
 
-function diagonalOrder(arr){
+  console.log(arr)
 
-        for (var line = 1; line <= (ROW+COL-1); line++) {
+  for (var k = 0; k < ROW; k++) {
+    process.stdout.write(arr[k][0] + " ");
+    var i = k - 1;    // set row index for next point in diagonal 
+    var j = 1;       //  set column index for   next point in diagonal 
+    /* Print Diagonally upward */
+    while (isValid(i, j)) {
+      process.stdout.write(arr[i][j] + " ");
+      i--;
+      j++;    // move in upright direction 
+    }
 
-            var start_col = Math.max(0, line-ROW);
-
-            var count = min(line, (COL-start_col), ROW)
-
-            var temp_arr = [];
-            for(var j = 0; j<count; j++){
-                temp_arr.push(arr[Math.min(ROW, line)-j-1][start_col+j]);
-                //console.log(arr[Math.min(ROW, i)-j-1][start_col])
-            }
-            console.log(temp_arr.join(' '));
-        }
-}   
-
-
-diagonalOrder(arr);
+    console.log("");
+  }
 
 
-function min(a, b, c){
- return Math.min(Math.min(a, b), c);
-}
+  // Note : we start from k = 1 to C-1; 
+  for (var k = 1; k < COL; k++) {
+    process.stdout.write(arr[ROW - 1][k] + " ");
+    var i = ROW - 2; // set row index for next  point in diagonal 
+    var j = k + 1; // set column index for  next point in diagonal 
+
+    /* Print Diagonally upward */
+    while (isValid(i, j)) {
+      process.stdout.write(arr[i][j] + " ");
+      i--;
+      j++; // move in upright direction 
+    }
+    console.log("");
+  }
+
+  function isValid(i, j) {
+    if (i < 0 || i >= ROW || j >= COL || j < 0) return false;
+    return true;
+
+  }
