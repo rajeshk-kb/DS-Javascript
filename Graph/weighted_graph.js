@@ -56,18 +56,18 @@ let graph = new Graph();
 
 
 // Dijkastra Algorithm
-// graph.addEdge('A', { B: 2, C: 4 });     // https://www.youtube.com/watch?v=Lfb8qkXzHY0
-// graph.addEdge('B', { C: 1, D: 4, E: 2 });
-// graph.addEdge('C', { E: 3 });
-// graph.addEdge('D', { F: 2 });
-// graph.addEdge('E', { D: 3, F: 2 });
-// graph.addEdge('F', {});
+graph.addEdge('A', { B: 2, C: 4 });     // https://www.youtube.com/watch?v=Lfb8qkXzHY0
+graph.addEdge('B', { C: 1, D: 4, E: 2 });
+graph.addEdge('C', { E: 3 });
+graph.addEdge('D', { F: 2 });
+graph.addEdge('E', { D: 3, F: 2 });
+graph.addEdge('F', {});
 
 
-graph.addEdge('0', { 1: 10, 2: 6, 3:5 });
-graph.addEdge('1', { 0: 10, 3: 15});
-graph.addEdge('2', { 0: 6, 3: 4});
-graph.addEdge('3', { 0: 5, 1: 15, 2:4 });
+// graph.addEdge('0', { 1: 10, 2: 6, 3:5 });
+// graph.addEdge('1', { 0: 10, 3: 15});
+// graph.addEdge('2', { 0: 6, 3: 4});
+// graph.addEdge('3', { 0: 5, 1: 15, 2:4 });
 
 Object.keys(graph).forEach(function(key) {
     var value = graph[key];
