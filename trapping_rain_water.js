@@ -37,6 +37,10 @@ function findWater(arr){
     console.log(water);
 
 
+
+
+
+// ================== Method 2 =====================
     // initialize output 
     var result = 0;
   

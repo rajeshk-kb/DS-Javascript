@@ -58,8 +58,7 @@ function re_arrange(head) {
     temp = head;
     var i = 0;
 
-    while(deque.length !== 0) 
-    { 
+    while(deque.length !== 0) { 
         if(i % 2 == 0) { 
             temp.data = deque[0]; 
             deque.shift();// delete first

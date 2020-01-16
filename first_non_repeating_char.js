@@ -16,6 +16,7 @@ function getfirstNonRepeatingChar(number) {
 
     var flags = new Uint8Array(256); //all is initialized by 0 
 
+console.log(flags)
     
     for (var i = 0; i < number.length; i++) { // O(n)
         flags[parseInt(number.charCodeAt(i))]++;

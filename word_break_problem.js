@@ -17,6 +17,8 @@ function wordBreak(str) {
 
         var dc = dictionaryContains(str.substr(0, i))
         var wb = wordBreak(str.substr(i, ln - i));
+
+        console.log(str.substr(0, i), str.substr(i, ln - i))
         console.log(ln)
         if (dc && wb) return true
     }

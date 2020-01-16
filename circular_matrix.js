@@ -44,3 +44,43 @@
     }
     console.log(A)
 })();
+
+
+
+
+
+
+//https://www.geeksforgeeks.org/circular-matrix-construct-a-matrix-with-numbers-1-to-mn-in-spiral-way/
+
+
+// Trick
+
+        // m = row
+        // n = col
+        // k = start row
+        // l = start col
+
+        //                                      -- l to n --
+        //                                         k++
+        //                                 --------------------->
+        //                                 /\                   |
+        //                                 |                    |
+        //               -- m-1 to r --    |                    | -- k to m --
+        //                    l++          |                    |    n--
+        //                                 |                    |
+        //                                 |                    |
+        //                                 |                    |
+        //                                 |                    \/
+        //                                 --------------------->
+        //                                      -- n-1 to l --
+        //                                         m--
+
+
+
+
+
+
+
+
+
+

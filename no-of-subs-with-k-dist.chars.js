@@ -4,7 +4,7 @@
 
 var str = 'abcbaa'
 var res = 0;
-var k = 2;
+var k = 3;
 var n = str.length;
 // To store count of characters from 'a' to 'z' 
 var cnt = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]

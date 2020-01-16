@@ -17,6 +17,7 @@ while (i < m && j < n) {
     } else if (arr1[i] > arr2[j]) {
         sum2 += arr2[j++];
     } else {
+        console.log(sum1, sum2, result)
         result += Math.max(sum1, sum2);
         sum1 = 0; sum2 = 0;
         while(i < m && j < n && arr1[i] == arr2[j]){

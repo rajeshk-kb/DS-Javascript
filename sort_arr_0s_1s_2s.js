@@ -1,4 +1,10 @@
+// Dutch National Flag
 
+
+// https://www.geeksforgeeks.org/sort-an-array-of-0s-1s-and-2s/
+
+// input: {0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1}
+// Output: {0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2}
 
 var arr = [0, 1, 2, 0, 1, 2];
 

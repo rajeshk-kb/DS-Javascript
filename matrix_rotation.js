@@ -40,7 +40,7 @@ function reverseColms(matrix) {
 
     var row = matrix.length;
     var col = matrix.length;
-    for (var i = 0; i < reverseColms; i++) {
+    for (var i = 0; i < col; i++) {
         for (var j = 0; j < row / 2; j++) {
             var temp = matrix[j][i];
             matrix[j][i] = matrix[row - 1 - j][i];

@@ -1,25 +1,33 @@
-https://leetcode.com/discuss/interview-question/344650/Amazon-Online-Assessment-Questions
+// https://leetcode.com/discuss/interview-question/344650/Amazon-Online-Assessment-Questions
  // Top N Buzzwords
- var numToys = 6
-  var topToys = 2
-  var toys = ["elmo", "elsa", "legos", "drone", "tablet", "warcraft"]
-  var numQuotes = 6
-  var quotes = [
-    "Elmo is the hottest of the season! Elmo will be on every kid's wishlist!",
-    "The new Elmo dolls are super high quality",
-    "Expect the Elsa dolls to be very popular this year, Elsa!",
-    "Elsa and Elmo are the toys I'll be buying for my kids, Elsa is good",
-    "For parents of older kids, look into buying them a drone",
-    "Warcraft is slowly rising in popularity ahead of the holiday season"
-  ];
 
-  console.log(findToy(quotes, toys, topToys, numToys));
+// You work on a team whose job is to understand the most sought after toys for the holiday season.
+// A teammate of yours has built a webcrawler that extracts a list of quotes about toys from different articles. 
+// You need to take these quotes and identify which toys are mentioned most frequently. Write an algorithm that 
+// identifies the top N toys out of a list of quotes and list of toys.
+
+// Your algorithm should output the top N toys mentioned most frequently in the quotes
+
+var numToys = 6
+var topToys = 2
+var toys = ["elmo", "elsa", "legos", "drone", "tablet", "warcraft"]
+var numQuotes = 6
+var quotes = [
+"Elmo is the hottest of the season! Elmo will be on every kid's wishlist!",
+"The new Elmo dolls are super high quality",
+"Expect the Elsa dolls to be very popular this year, Elsa!",
+"Elsa and Elmo are the toys I'll be buying for my kids, Elsa is good",
+"For parents of older kids, look into buying them a drone",
+"Warcraft is slowly rising in popularity ahead of the holiday season"
+];
+
+console.log(findToy(quotes, toys, topToys, numToys));
   // output [ 'Elmo', 'Elsa' ]
 
 
 
 
-function findToy(quotes, toys, topToys, numToys) {
+  function findToy(quotes, toys, topToys, numToys) {
 
   //combine quotes and split the words
   let words = quotes.join(' ').split(' ');
@@ -37,6 +45,7 @@ function findToy(quotes, toys, topToys, numToys) {
     }
   }
 
+  console.log('=======================')
   console.log(hash)
   //sort words alphabetically if they have equal appearance
   let sorted = Object.keys(hash).sort(function (a, b) {

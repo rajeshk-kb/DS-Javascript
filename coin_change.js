@@ -7,8 +7,8 @@
 
 
 
-var arr = [1, 2, 3];
-var N = 4;
+var arr = [1,2,3];
+var N = 5;
 
 var no_of_ways = count(arr, arr.length, N);
 
@@ -48,7 +48,10 @@ for(var i=0;i<m;i++) {
 
   } 
 } 
-var op = table[m][n];
+
+
+console.log(table)
+var op = table[m][n]; // handle odd or even array length please
 
 return op;
 }

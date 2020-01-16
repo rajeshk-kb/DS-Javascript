@@ -4,7 +4,7 @@
 // https://www.geeksforgeeks.org/find-the-longest-substring-with-k-unique-characters-in-a-given-string/
 
 var str = 'aabbcc';
-var m = 3;
+var m = 1;
 var map = new Map();
 var longest_sub = '';
 for(var i = 0; i<str.length; i++){
