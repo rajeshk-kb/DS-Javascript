@@ -39,7 +39,7 @@ function printZigZagTraversal(rootNode) {
 
   // push the root 
   currentLevel.push(rootNode);
-  var leftToRight = true;
+  let leftToRight = true;
 
   // check if stack is empty 
   while (currentLevel.length !== 0) {

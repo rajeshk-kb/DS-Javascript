@@ -14,6 +14,7 @@ function binaryToDLL(root){
   }
   binaryToDLL(root.left);
   if (prev === null) {
+      head = root;
       prev = root;
   } else {
     root.left = prev;
