@@ -57,7 +57,6 @@ function dijkstra(start, graph) {
                 result[key] = value;
             }
         }
-        // console.log(result)
     })
     console.log(result) // From A to anywhere.
 };
@@ -66,15 +65,14 @@ function dijkstra(start, graph) {
 // FInd minimum
 function findMin(data) {
     var min = Infinity;
-    var key = null;
+    var obj = {};
     for (var k in data) {
         if (data[k] < min) {
-            var key = k;
             min = data[k];
+            obj = {};
+            obj[k] = min;
         }
     }
-    var obj = {};
-    obj[key] = min;
     return obj;
 }
 
