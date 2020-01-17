@@ -10,13 +10,9 @@
 let BST = require('./create_binary_tree.js');
 
 
-var util = require('util');
-//console.log(util.inspect(BST, { showHidden: true, depth: null, colors: true }))
-
 var sum = 0;
 var findPath = false;
 function hasPathSum(root, num) {
-    
     if (root == null) {
         return null
     } else {
@@ -28,15 +24,12 @@ function hasPathSum(root, num) {
         } else {
             sum = sum - root.value;
         }
-       
     }
     if (findPath) {
-        console.log("dddd")
         return num
     } else {
         return 0;
     }
-
 }
 
 
@@ -46,6 +39,5 @@ if (hasPathSum(BST.root, 97))
     console.log('Yes');
 else
     console.log('No');
-
 
 // Time Complexity: O(n)
