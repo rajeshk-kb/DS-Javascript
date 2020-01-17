@@ -39,9 +39,9 @@ infix_to_postfix(str);
       }
     }
     while (stack.length != 0) {
-      if (stack.peek() == '(')
+      if (stack[stack.length - 1] == '(')
         return "Invalid Expression";
-      result += stack.pop();
+        res += stack.pop();
     }
     console.log(res) // abcd^e-fgh*+^*+i-
   }

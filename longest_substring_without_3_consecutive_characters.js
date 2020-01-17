@@ -15,7 +15,7 @@ var temp = 2;
 var result = 2;
 
 
-for (var i = 0; i < str.length; i++) {
+for (var i = 2; i < str.length; i++) {
 	
       // If no three consecutive characters 
         // are same then increment temporary count 

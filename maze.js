@@ -15,7 +15,7 @@ var sol =  [[0, 0, 0, 0],
             [0, 0, 0, 0]];
 
 // console.log(util.inspect(board, { showHidden: true, colors: true }))
-function solveNQUtil(board, row, col) {
+function solveNQUtil(board, row, col, sol) {
     if (col == N - 1 && row == N - 1) {
         sol[row][col] = 7;
         console.log(util.inspect(sol, { showHidden: true, colors: true }))
