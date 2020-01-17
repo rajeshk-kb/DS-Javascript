@@ -23,7 +23,7 @@ LikedList.prototype.push = function (val) {
 }
 
 
-
+// Merge two shortest list
 let list1 = new LikedList();
 
 list1.push(5);
