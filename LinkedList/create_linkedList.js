@@ -1,56 +1,63 @@
 
-function LikedList() {
-    this.head = null;
+class Node {
+    // constructor 
+    constructor(value) {
+        this.data = value;
+        this.next = null
+    }
 }
 
-
-LikedList.prototype.push = function (val) {
-    let node = {
-        data: val,
-        next: null
+// linkedlist class 
+class LinkedList {
+    constructor(value) {
+        this.head = null;
+        this.size = 0;
     }
 
-    if (!this.head) {
-        this.head = node;
-    } else {
+    // add item to linkedlist
+    add(value) {
+        var node = new Node(value);
 
-        // Insert at beginning  of liked list 
+        // At beginning 
         node.next = this.head;
         this.head = node;
 
+        // At ending
+     /*    var current;
+        if (this.head == null)
+            this.head = node;
+        else {
+            current = this.head;
+            while (current.next) {
+                current = current.next;
+            }
+            current.next = node;
+        } */
+        this.size++;
+    }
 
-        // Insert at end of the liked list
-        /* current = this.head;
-        while (current.next) {
-            current = current.next;
+    // prints the list items 
+    printList() {
+        console.log(this);
+        var curr = this.head;
+        var str = "";
+        while (curr) {
+            str += curr.data + "->";
+            curr = curr.next;
         }
-        current.next = node; */
+        console.log(str);
     }
 
 }
 
+var ll = new LinkedList();
 
+ll.add(10);
+ll.add(20);
+ll.add(30);
+ll.add(40);
+ll.add(50);
 
-let ll = new LikedList();
+ll.printList();
 
-ll.push(10);
-ll.push(12);
-ll.push(19);
-ll.push(22);
-ll.push(15);
-ll.push(11);
-ll.push(35);
-
-/* console.log(ll.head.data)
-console.log(ll.head.next.data)
-console.log(ll.head.next.next.data)
-console.log(ll.head.next.next.next.data)
-console.log(ll.head.next.next.next.next.data)
-console.log(ll.head.next.next.next.next.next.data)
-console.log(ll.head.next.next.next.next.next.next.data) */
-
-
-module.exports.node = ll.head;
-
-
-
+module.exports.node = ll;
