@@ -18,11 +18,11 @@ function wordBreak(str) {
 
         var dc = dictionaryContains(str.substr(0, i))
 
-        // console.log(" ====== ", str.substr(0, i) ,  "==", str.substr(i, ln - i))
+        console.log(" ====== ", str.substr(0, i) ,  "==", str.substr(i, ln - i))
         var wb = wordBreak(str.substr(i, ln - i));
 
         if (dc && wb){
-            // console.log(" ====== ", str.substr(0, i) ,  "==", str.substr(i, ln - i))
+            console.log(" ====== ", str.substr(0, i) ,  "==", str.substr(i, ln - i))
             return true
         } 
     }
