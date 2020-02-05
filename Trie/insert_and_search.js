@@ -48,7 +48,7 @@ class Trie{
 				return false;
 			}
 
-			if(i == word.length-1 && node.end !== true){
+			if(i == word.length-1 && node.end == false){
 				return false;
 			}
 		}
@@ -62,32 +62,35 @@ trie.insert('there');
 trie.insert('their');
 trie.insert('answer');
 trie.insert('any');
+trie.insert('ansible');
 trie.insert('bye');
 
 var util = require('util')
 // console.log(util.inspect(trie, { showHidden: false, depth: null, colors: true }))
 
-//                        root
-//                     /   \    \
-//                     t   a     b
-//                     |   |     |
-//                     h   n     y
-//                     |   |  \  |
-//                     e   s  y  e
-//                  /  |   |
-//                  i  r   w
-//                  |  |   |
-//                  r  e   e
-//                         |
-//                         r
+//                        	root
+//                     /   		\      \
+//                     t   		a    	b
+//                     |   		|     	|
+//                     h   		n     	y
+//                     |   		|  \  	|
+//                     e     	s  	y 	e
+//                  /  |    /	|
+//                  i  r   i	w
+//                  |  |   |	|
+//                  r  e   b	e
+//                         |	|
+//                         l	r
+//                         |	
+//                         e	
+
+
 
 
 // Search a word in trie
 var word = trie.search('ther');
 
 // console.log(word?'Exists':'Not Exists!')
-
-
 
 
 module.exports.trie = trie.root
