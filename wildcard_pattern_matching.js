@@ -60,14 +60,41 @@ class WildCardPattern {
         return false
     }
 
+   // https://www.geeksforgeeks.org/wildcard-character-matching/
+    strMatchRec(first, second){
+
+        // Base case
+        if(first.length == 0 && second.length == 0)
+            return true;
+
+        if(first.length>1 && first.charAt(0) == '*' && second.length == 0)
+            return false;
+
+        if((first.length>1 && first.charAt(0) == '?') ||
+            first.length !== 0 && second.length !== 0 &&
+            first.charAt(0) === second.charAt(0))
+            return this.strMatchRec(first.substring(1), second.substring(1))
+
+        if(first.length>1 && first.charAt(0) == '*')
+            return this.strMatchRec(first.substring(1), second) || this.strMatchRec(first, second.substring(1));
+        return false;
+    }
+
 }
-let str = 'baaabab'.split(''); // convert string to char array
-let pattern = "*****b***ab***".split('');
-// let pattern = "b??aba**".split('');
+let str = 'abcd'
+let pattern = "*c*d"
 
 
 
 var wcp = new WildCardPattern();
 
-var output = wcp.strMatch(str, pattern, str.length, pattern.length) ? 'Yes' : 'No'
+var output = wcp.strMatch(str.split(''), pattern.split(''), str.length, pattern.length) ? 'Yes' : 'No'
+var output2 = wcp.strMatchRec(pattern, str) ? 'Yes' : 'No'
 console.log(output);
+console.log(output2);
+
+
+
+
+
+
