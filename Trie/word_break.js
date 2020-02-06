@@ -72,7 +72,7 @@ function wordBreakDP(str, dict) {
         return true;
 
     for (let i = 1; i <= size; i++) {
-      We first check whether 
+        // We first check whether 
         // First check whether current prefix is in dictionary. Then recursively check for remaining 
         // string str.substr(i, size) which is suffix of length size
         if(dictionaryContains(dict, str.substring(0, i)) && wordBreakDP(str.substring(i, size), dict)){ // recursion
