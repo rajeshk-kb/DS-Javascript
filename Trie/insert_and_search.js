@@ -54,6 +54,18 @@ class Trie{
 		}
 		return true;
 	}
+
+	printWords(root, text){
+		for (let key in root.children) {
+			var rChild = root.children[key];// root child
+		  if(rChild.end == true){
+			console.log(text+rChild.key);
+			return;
+		  }else{
+			this.printWords(rChild, text+rChild.key)
+		  }
+		}
+	}
 }
 
 
@@ -64,6 +76,7 @@ trie.insert('answer');
 trie.insert('any');
 trie.insert('ansible');
 trie.insert('bye');
+trie.printWords(trie.root, '');
 
 var util = require('util')
 // console.log(util.inspect(trie, { showHidden: false, depth: null, colors: true }))
