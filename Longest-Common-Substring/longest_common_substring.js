@@ -3,20 +3,20 @@
 // Output : 5
 // The longest common substring is “Geeks” and is of length 5.
 
-class GFG {
+class longestCommonString {
 
     // Dynamic Programming METHOD ==> O(nxm)
     lcsDP(X, Y, m, n) {
         // Create a table to store lengths of longest common suffixes of substrings;
-        let LCStuff = Array(m+1).fill(0).map(() => Array(n+1).fill(0));
+        let LCSuff = Array(m+1).fill(0).map(() => Array(n+1).fill(0));
         let result = 0;
         
         for (let i = 1; i <= m; i++) {
             for (let j = 1; j <= n; j++) {
                 if(X.charAt(i-1) == Y.charAt(j-1)){
-                    LCStuff[i][j] = LCStuff[i-1][j-1] + 1;
+                    LCSuff[i][j] = LCSuff[i-1][j-1] + 1;
+                    result = Math.max(result, LCSuff[i][j])
                 }
-                result = Math.max(result, LCStuff[i][j])
             }
         }
         return result;
@@ -47,7 +47,7 @@ let X = "abcdxyz";
 let Y = "xyzabcd";
 let m = X.length;
 let n = Y.length;
-var lcs = new GFG();
+var lcs = new longestCommonString();
 
 console.log(lcs.lcsDP(X, Y, m, n, 0)); 
 console.log(lcs.lcsRec(X, Y, m, n, 0)); 
