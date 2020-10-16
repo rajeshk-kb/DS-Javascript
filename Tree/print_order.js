@@ -11,8 +11,7 @@ print_inorder(BST.root);
 
 
 // Print by inorder
-// or print in sorting order(ascending order)
-// or left --> right
+// left --> root --> right
 function print_inorder(root){ 
     if(!root){
         return;
@@ -25,8 +24,7 @@ function print_inorder(root){
 console.log("=========================")
 
 // Print by preorder
-// or print in sorting order
-// or left --> right
+// root --> left --> right
 function print_preorder(root){ 
     if(!root){
         return;
@@ -40,9 +38,9 @@ function print_preorder(root){
 
 console.log("=========================")
 
-// Print by post
+// Print by postorder
+// left --> right --> root
 // or print in sorting order
-// or left --> right
 function print_postorder(root){ 
     if(!root){
         return;
