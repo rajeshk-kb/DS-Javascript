@@ -32,6 +32,7 @@ function deleteNode(root, value){
            root = null;
            return temp;
        }else if (root.right == null){
+          var temp = root.left;
           root = null;
           return temp;
        }
