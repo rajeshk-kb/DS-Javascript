@@ -19,6 +19,18 @@ tree.left.right.random = tree.right;
 
 cloneTree(tree)
 
+//Algotitham
+/* 
+   cloneNode->key  = treeNode->key
+   cloneNode->left = treeNode->left
+   cloneNode->right = treeNode->right
+   map[treeNode] = cloneNode 
+
+   Recursively traverse both trees and set random pointers using entries from hash table
+   cloneNode->random = map[treeNode->random] 
+
+*/
+
 
 // This function creates clone by copying key and left and right pointers
 // This function also stores mapping from given tree node to clone.
