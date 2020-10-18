@@ -19,7 +19,7 @@ tree.left.right.random = tree.right;
 
 cloneTree(tree)
 
-//Algotitham
+//Algoritham
 /* 
    cloneNode->key  = treeNode->key
    cloneNode->left = treeNode->left
