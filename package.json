@@ -5,8 +5,9 @@
   "main": "app.js",
   "dependencies": {
     "circular-json": "^0.5.1",
-    "express": "^4.15.3",
+    "express": "^4.17.1",
     "file-system": "^2.2.2",
+    "node-fetch": "^2.6.1",
     "nodemon": "^1.11.0"
   },
   "devDependencies": {},
